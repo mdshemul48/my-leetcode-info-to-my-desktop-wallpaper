@@ -22,15 +22,15 @@ class Scraper:
 
     def getScreenShortOfRank(self):
         element = self.web.find_element(By.XPATH, '//*[@id="__next"]/div/div[2]/div/div[1]/div/div[1]/div[1]')
-        element.screenshot("temp/rank.png")
+        element.screenshot("images/rank.png")
 
     def getScreenShortOfChart(self):
         element = self.web.find_element(By.XPATH, '//*[@id="__next"]/div/div[2]/div/div[2]/div[2]/div')
-        element.screenshot("temp/chart.png")
+        element.screenshot("images/chart.png")
 
     def getScreenShortOfStatus(self):
         element = self.web.find_element(By.XPATH, '//*[@id="__next"]/div/div[2]/div/div[2]/div[1]/div[1]/div')
-        element.screenshot("temp/solved.png")
+        element.screenshot("images/solved.png")
 
 
 if __name__ == "__main__":
