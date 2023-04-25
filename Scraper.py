@@ -13,9 +13,14 @@ class Scraper:
 
         options = webdriver.ChromeOptions()
         service = Service(ChromeDriverManager().install())
+
+        # options.headless = True
+        options.add_argument("--window-size=1920,1080")
+
         self.web = webdriver.Chrome(service=service, options=options)
         self.web.maximize_window()
         self.web.get("https://leetcode.com/mdshemul48/")
+
         sleep(5)
 
         syncDir()
