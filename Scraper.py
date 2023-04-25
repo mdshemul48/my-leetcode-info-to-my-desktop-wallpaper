@@ -32,6 +32,9 @@ class Scraper:
         element = self.web.find_element(By.XPATH, '//*[@id="__next"]/div/div[2]/div/div[2]/div[1]/div[1]/div')
         element.screenshot("images/solved.png")
 
+    def __del__(self):
+        self.web.close()
+
 
 if __name__ == "__main__":
     s = Scraper()

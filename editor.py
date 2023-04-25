@@ -18,7 +18,6 @@ class Editor:
         self.mainWallpaper.paste(newImage, location)
 
     def save(self):
-        self.mainWallpaper.show()
         self.mainWallpaper.save("images/wallpaper.jpg", quality=100)
 
 
