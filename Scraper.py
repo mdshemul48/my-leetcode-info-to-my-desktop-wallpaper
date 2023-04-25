@@ -14,7 +14,6 @@ class Scraper:
         options = webdriver.ChromeOptions()
         service = Service(ChromeDriverManager().install())
 
-        # options.headless = True
         options.add_argument("--window-size=1920,1080")
 
         self.web = webdriver.Chrome(service=service, options=options)
@@ -38,7 +37,8 @@ class Scraper:
         element.screenshot("images/solved.png")
 
     def __del__(self):
-        self.web.close()
+        # self.web.close()
+        pass
 
 
 if __name__ == "__main__":
