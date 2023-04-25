@@ -1,11 +1,16 @@
-import requests
+from Scraper import Scraper
 
 
-def fetchLeetCodeProfile():
-    data = requests.get("https://leetcode.com/mdshemul48/")
-    print(data.text)
+def main():
+    scrap = Scraper()
+    scrap.getScreenShortOfRank()
+    scrap.getScreenShortOfStatus()
+    scrap.getScreenShortOfChart()
+
+
+
     pass
 
 
 if __name__ == "__main__":
-    fetchLeetCodeProfile()
+    main()
